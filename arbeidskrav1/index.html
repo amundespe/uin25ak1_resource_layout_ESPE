@@ -1,42 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Resources</title>
-    <script src="ressurser.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('resources-container');
-
-            resources.forEach(resource => {
-                const categoryDiv = document.createElement('div');
-                categoryDiv.classList.add('category');
-
-                const categoryTitle = document.createElement('h2');
-                categoryTitle.textContent = resource.category;
-                categoryDiv.appendChild(categoryTitle);
-
-                const categoryText = document.createElement('p');
-                categoryText.textContent = resource.text;
-                categoryDiv.appendChild(categoryText);
-
-                const sourcesList = document.createElement('ul');
-                resource.sources.forEach(source => {
-                    const sourceItem = document.createElement('li');
-                    const sourceLink = document.createElement('a');
-                    sourceLink.href = source.url;
-                    sourceLink.textContent = source.title;
-                    sourceItem.appendChild(sourceLink);
-                    sourcesList.appendChild(sourceItem);
-                });
-                categoryDiv.appendChild(sourcesList);
-
-                container.appendChild(categoryDiv);
-            });
-        });
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="ressurser.js"></script>
+    <title>Arbeidskrav 1</title>
 </head>
 <body>
-    <h1>Learning Resources</h1>
-    <div id="resources-container"></div>
+    <header>
+        <nav>
+            <!--buttonClick(this, 'HTML') kaller funksjonen når knappen er trykket på.-->
+            <button onclick="buttonClick(this, 'HTML')" class="subject active">HTML</button>
+            <button onclick="buttonClick(this, 'CSS')" class="subject">CSS</button>
+            <button onclick="buttonClick(this, 'JavaScript')" class="subject">JavaScript</button>
+            <button onclick="buttonClick(this, 'React')" class="subject">React</button>
+            <button onclick="buttonClick(this, 'Sanity')" class="subject">Santity and headless CMS</button>
+        </nav>
+    </header>
+
+    <!--main-element som skal fylles med innhold fra ressurser.js-->
+    <main id="htmlElement"></main>
 </body>
 </html>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --darkblue: #2A324B;
+    --lightblue: #58699D;
+    --purple: #E1E5EE;
+    --white: #fff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+body {
+    font-family: "Monserrat", sans-serif;
+    background-color: var(--purple);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+
+    button {
+        flex: 1;
+        height: 90px;
+        width: 277px;
+        font-size: 20px;
+    }
+}
+.subject {
+    background-color: var(--darkblue);
+    color: var(--white);
+    padding: 25px 55px;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.active {
+    background-color: var(--white);
+    color: var(--darkblue);
+}
+
+main {
+
+
+    .resources {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: var(--white);
+        color: var(--darkblue);
+        width: calc(285px * 5);
+        margin: 0 auto;
+
+        h2{
+            margin: 0;
+            padding: 3rem;
+            padding-bottom: 1rem;
+        }
+
+        p {
+            padding-left: 3rem;
+        }
+
+        ul{
+            padding-left: 5rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+    
+}
+
+/*Media Queries for telefon*/
+@media only screen and (max-width: 768px) {
+    header {
+        margin-top: 10px; 
+    }
+
+    nav {
+        flex-direction: column; 
+    }
+
+    nav button {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    main {
+
+        .resources {
+            width: 90%; 
+            margin: 0; 
+            padding: 1rem; 
+
+            h2 {
+                padding: 1rem;  
+            }
+
+            p {
+                padding-left: 1rem; 
+            }
+
+            ul {
+                padding-left: 2rem; 
+                margin-right: 2rem;
+                padding-bottom: 2rem; 
+            }
+        }
+    }
+}
