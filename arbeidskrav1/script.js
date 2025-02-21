@@ -3,7 +3,7 @@ const htmlElement = document.getElementById("htmlElement");
 
 //Lager en array med objekter som inneholder informasjon om ressurser.
 function displayResources(category) {
-    const recourcesFilter = resources.filter(resource => resource.category === category);
+    const resourcesFilter = resources.filter(resource => resource.category === category);
 
     //Lager en variabel som skal inneholde HTML-koden som skal vises på nettsiden.
     let resourceHTML = "";
@@ -24,12 +24,12 @@ function displayResources(category) {
 }
 
 //Henter inn elementet med klassen "subject" fra HTML-filen.
-function displayResources(button, content) {
+function buttonClick(button, content) {
     const activeButton = document.querySelector(".subject.active");
 
     //Sjekker om det er en aktiv knapp, og fjerner klassen "active" fra denne.
     if (activeButton) {
-        activeButton.classList.remove("active");
+        button.classList.remove("active");
     }
 
     //Legger til klassen "active" på knappen som ble trykket på.
