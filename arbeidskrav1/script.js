@@ -29,7 +29,7 @@ function buttonClick(button, content) {
 
     //Sjekker om det er en aktiv knapp, og fjerner klassen "active" fra denne.
     if (activeButton) {
-        button.classList.remove("active");
+        activeButton.classList.remove("active");
     }
 
     //Legger til klassen "active" på knappen som ble trykket på.
@@ -40,3 +40,4 @@ function buttonClick(button, content) {
 }
 
 displayResources("HTML");
+console.log("script loaded"); 

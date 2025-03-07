@@ -94,3 +94,5 @@ const resources = [
         ]
     },
 ]
+
+console.log("resources loaded");
