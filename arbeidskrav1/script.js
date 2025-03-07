@@ -37,6 +37,7 @@ function buttonClick(button, content) {
 
     //Kaller på funksjonen "displayResources" og sender med innholdet som skal vises.
     displayResources(content);
+    console.log("content displayed");
 }
 
 displayResources("HTML");
